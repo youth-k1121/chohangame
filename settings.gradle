@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "cho-han-game"
+include ':app'
+include ':domainModel'
+include ':feature:play'
+include ':usecase'
+include ':uiModel'

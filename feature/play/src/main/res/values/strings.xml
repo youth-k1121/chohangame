@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ask_han_or_cho">半か丁か</string>
+    <string name="answer_btn_han">半</string>
+    <string name="answer_btn_cho">丁</string>
+    <string name="content_description_dealer_image">dealer image</string>
+    <string name="content_description_dice1_image">image of dice 1</string>
+    <string name="content_description_dice2_image">image of dice 2</string>
+    <string name="retry">リトライ</string>
+</resources>

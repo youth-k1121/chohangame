@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.cho_han_game.feature.play.question.QuestionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_large">
+
+        <ImageView
+            android:id="@+id/dealer_img"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:contentDescription="@string/content_description_dealer_image"
+            android:src="@drawable/img_dealer"
+            app:layout_constraintBottom_toTopOf="@id/question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:text="@string/ask_han_or_cho"
+            android:textSize="@dimen/font_size_huge"
+            app:layout_constraintBottom_toTopOf="@id/han_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dealer_img" />
+
+        <Button
+            android:id="@+id/han_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/answer_btn_height"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:onClick="@{view->viewModel.onClickHan()}"
+            android:text="@string/answer_btn_han"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="@dimen/answer_btn_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cho_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question" />
+
+        <Button
+            android:id="@+id/cho_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/answer_btn_height"
+            android:layout_marginStart="@dimen/margin_small"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:onClick="@{view->viewModel.onClickCho()}"
+            android:text="@string/answer_btn_cho"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="@dimen/answer_btn_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/han_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/han_btn"
+            app:layout_constraintTop_toTopOf="@id/han_btn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="uiModel"
+            type="com.example.cho_han_game.uimodel.ResultUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".result.ResultFragment">
+
+        <ImageView
+            android:id="@+id/dice1_image"
+            android:layout_width="@dimen/result_dice_img_side_length"
+            android:layout_height="@dimen/result_dice_img_side_length"
+            android:contentDescription="@string/content_description_dice1_image"
+            app:imageResource="@{uiModel.dice1ImgResId}"
+            app:layout_constraintBottom_toTopOf="@id/judge_result_text"
+            app:layout_constraintEnd_toStartOf="@id/dice2_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/dice2_image"
+            android:layout_width="@dimen/result_dice_img_side_length"
+            android:layout_height="@dimen/result_dice_img_side_length"
+            android:contentDescription="@string/content_description_dice2_image"
+            app:imageResource="@{uiModel.dice2ImgResId}"
+            app:layout_constraintBottom_toBottomOf="@id/dice1_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dice1_image"
+            app:layout_constraintTop_toTopOf="@id/dice1_image" />
+
+        <TextView
+            android:id="@+id/judge_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:text="@{uiModel.resultText}"
+            android:textSize="@dimen/font_size_huge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/retry_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dice1_image" />
+
+        <Button
+            android:id="@+id/retry_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_xxlarge"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:paddingVertical="@dimen/margin_xlarge"
+            android:text="@string/retry"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="@dimen/font_size_xlarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/judge_result_text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
