@@ -8,4 +8,5 @@
     <string name="content_description_dice1_image">image of dice 1</string>
     <string name="content_description_dice2_image">image of dice 2</string>
     <string name="retry">リトライ</string>
+    <string name="play_history">履歴</string>
 </resources>
