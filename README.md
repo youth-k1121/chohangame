@@ -9,38 +9,56 @@
 ## app
 アプリ全体をまとめるモジュール
 
-現在はMainActivityがあるのみ
+### ActivityNavigators
+各featureモジュールで定義した画面遷移I/Fの実装をする
+
+実装したオブジェクトは `ChoHanGameApplication.onCreate` で `NavigationRegistry` に追加する
 
 ## 各feature
-### 役割
 各機能のモジュール
 
-現在はplayモジュールのみ
+画面(Fragment)ごとにパッケージを分ける
 
-今後start,historyなどを追加予定
+### Activity
+AppCompatActivityを拡張
 
-画面ごとにパッケージを分ける
+Fragment間の遷移を実装する
 
-### 責務
-UIの構築と操作
+### Navigation
+他Activityへの遷移関数を定義するためのI/F
+
+appモジュールで実装し、navigationモジュールから取得する
+
+### Fragment
+UIを構築する
+
+画面状態の保持や動作についてはViewModelに任せる
+
+### ViewModel
+UIの状態保持・およびユーザーアクションに対応する動作の呼び出しをする
 
 ## uiModel
-### 役割
 UIのためにモデリングされたクラス群
 
-### 責務
-画面表示に用いるデータの集約
+### UiModel
+画面表示に用いるデータクラス
+
+## uiCommon
+各feature共通で使うリソースを配置する
+
+## navigation
+feature間遷移用オブジェクトの管理
+
+### NavigationRegistry
+appモジュールで実装した遷移関数を保持し、featureモジュールに提供するためのオブジェクト
+
+[参考サイト](https://engineering.mercari.com/blog/entry/2019-12-04-100000/)
 
 ## usecase
-### 役割
-UIとビジネスロジックの仲介
+UIとビジネスロジックの仲介をする
 
-### 責務
+### UseCase
 ビジネスロジックの操作とI/O処理の呼び出し
 
 ## domainModel
-### 役割
 モデリングしたドメインオブジェクトをまとめる
-
-### 責務
-ドメインモデルとビジネスロジックの実装
