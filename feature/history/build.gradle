@@ -40,7 +40,7 @@ dependencies {
     implementation project(":usecase")
     implementation project(":domainModel")
     implementation project(":uiModel")
-    implementation project(":common_navigation")
+    implementation project(':navigation')
     implementation project(":uiCommon")
 
     implementation 'androidx.core:core-ktx:1.6.0'

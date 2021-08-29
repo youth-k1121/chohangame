@@ -1,4 +1,4 @@
-package com.example.cho_han_game.common_navigation
+package com.example.cho_han_game.navigation
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

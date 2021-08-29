@@ -1,8 +1,6 @@
-package com.example.cho_han_game.common_navigation
+package com.example.cho_han_game.navigation
 
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).

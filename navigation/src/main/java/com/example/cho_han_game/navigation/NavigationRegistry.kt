@@ -1,4 +1,4 @@
-package com.example.cho_han_game.common_navigation
+package com.example.cho_han_game.navigation
 
 object NavigationRegistry {
 

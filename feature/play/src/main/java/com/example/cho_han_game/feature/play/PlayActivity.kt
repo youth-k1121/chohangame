@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.example.cho_han_game.common_navigation.NavigationRegistry
+import com.example.cho_han_game.navigation.NavigationRegistry
 import com.example.cho_han_game.domain_model.ChoHanResult
 import com.example.cho_han_game.feature.play.databinding.ActivityPlayBinding
 import com.example.cho_han_game.feature.play.question.QuestionFragment
