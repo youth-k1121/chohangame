@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="history_tool_bar_title">履歴</string>
+
+    <string name="content_description_img_dice1" tools:ignore="Typos">image of dice1</string>
+    <string name="content_description_img_dice2" tools:ignore="Typos">image of dice2</string>
+
+</resources>

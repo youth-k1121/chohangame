@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PlayActivity">
-    
+    tools:context=".HistoryActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -14,14 +14,13 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/history_tool_bar_title"
         app:titleTextColor="@color/design_default_color_on_primary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight"
-        app:menu="@menu/play_tool_bar" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </LinearLayout>

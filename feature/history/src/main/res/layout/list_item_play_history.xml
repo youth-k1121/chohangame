@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="uiModel"
+            type="com.example.cho_han_game.uimodel.PlayHistoryUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_middle">
+
+        <ImageView
+            android:id="@+id/dice1_img"
+            android:layout_width="@dimen/dice_img_side_length"
+            android:layout_height="@dimen/dice_img_side_length"
+            android:contentDescription="@string/content_description_img_dice1"
+            app:imageResource="@{uiModel.dice1ImgResId}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/dice2_img"
+            android:layout_width="@dimen/dice_img_side_length"
+            android:layout_height="@dimen/dice_img_side_length"
+            android:layout_marginStart="@dimen/margin_small"
+            android:contentDescription="@string/content_description_img_dice2"
+            app:imageResource="@{uiModel.dice1ImgResId}"
+            app:layout_constraintStart_toEndOf="@id/dice1_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/answer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:text="@{uiModel.answer}"
+            android:textSize="@dimen/font_size_large"
+            app:layout_constraintStart_toEndOf="@id/dice2_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/judgement_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_middle"
+            android:text="@{uiModel.resultText}"
+            android:textSize="@dimen/font_size_large"
+            app:layout_constraintStart_toEndOf="@id/answer_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{uiModel.date}"
+            android:textSize="@dimen/font_size_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
